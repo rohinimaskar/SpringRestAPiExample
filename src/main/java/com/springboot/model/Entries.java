@@ -7,6 +7,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Entries {
+    @JsonProperty("glossary")
+    private List<Glossary> glossary;
 
     public List<Glossary> getGlossary() {
 		return glossary;
@@ -16,6 +18,5 @@ public class Entries {
 		this.glossary = glossary;
 	}
 
-	@JsonProperty("glossary")
-    private List<Glossary> glossary;
+
 }
